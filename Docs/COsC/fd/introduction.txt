@@ -1,8 +1,8 @@
-													  file descriptors
-					    						 by wassim bolles 10 oct 23
-
-File descriptors are a fundamental concept in Unix-like operating systems, including Linux. They are essential for handling input and output (I/O) operations
-such as reading from or writing to files, pipes, sockets, and other sources. Understanding file descriptors is crucial for developing and troubleshooting software in these environments.
+														    file descriptors
+					    	    						 	        by wassim bolles 10 oct 23
+ 
+						File descriptors are a fundamental concept in Unix-like operating systems, including Linux. They are essential for handling input and output (I/O) operations
+					such as reading from or writing to files, pipes, sockets, and other sources. Understanding file descriptors is crucial for developing and troubleshooting software in these environments.
 
 Here's everything you need to know about file descriptors...
 
