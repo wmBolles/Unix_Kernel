@@ -11,7 +11,7 @@ File Descriptors are essential elements in the world of system programming. They
 - File Operations with FDs
 - Best Practices in FD Handling
 
-[Read more](file_descriptors.md)
+[Read more](fd/introduction.txt)
 
 ## Memory Management
 
