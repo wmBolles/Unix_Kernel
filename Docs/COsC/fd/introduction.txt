@@ -1,0 +1,21 @@
+						  file descriptors
+					     by wassim bolles 10 oct 23
+
+File descriptors are a fundamental concept in Unix-like operating systems, including Linux. They are essential for handling input and output (I/O) operations, such as reading from or writing to files, pipes, sockets, and other sources. Understanding file descriptors is crucial for developing and troubleshooting software in these environments. Here's everything you need to know about file descriptors
+
+1 - What is a File Descriptor?
+
+A file descriptor is a unique non-negative integer that the operating system assigns to every open file, device, or socket. It serves as a reference or handle to identify and access that resource.
+
+2 - Types of File Descriptors:
+There are typically three types of file descriptors:
+
+	Standard Input (stdin):
+		Represented as 0, it is the default input stream where programs read data from the keyboard or 
+		another input source.
+	Standard Output (stdout):
+	Represented as 1, it is the default output stream where programs write data, which is usually displayed
+	on the screen.
+	Standard Error (stderr):
+	Represented as 2, it is also an output stream, but it is specifically meant for error messages and 
+	diagnostics.
