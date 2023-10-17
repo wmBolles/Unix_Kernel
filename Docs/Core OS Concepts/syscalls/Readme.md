@@ -40,4 +40,6 @@ Here are 10 common Unix system calls with simple descriptions:
 
 - `malloc() / free()`: Functions for dynamic memory allocation and deallocation in C and C++ programs.
 
+You can find an example of using the `open`, `read`, and `write` system calls in <a href="https://github.com/wmBolles/Unix_Kernel/blob/main/Docs/Core%20OS%20Concepts/syscalls/Example.c">Example.c</a>
+
 These are just a few examples of the many system calls available in Unix-like operating systems. Each system call serves a specific purpose and provides an interface for user processes to interact with the kernel and the underlying hardware.
