@@ -54,3 +54,47 @@ Each process has a limit on the number of file descriptors it can open simultane
 
 In summary, file descriptors are essential for managing input and output in Unix-like operating systems. They provide a standardized way to interact with files, devices, and other I/O sources, making them a fundamental concept for any software developer or system administrator working in these environments. Proper understanding and management of file descriptors are critical for writing efficient and reliable software.
 
+# File Descriptors in Unix-Like Operating Systems
+
+File descriptors (FDs) are fundamental in Unix-like operating systems, including the Linux kernel, for managing and interacting with files, devices, and other I/O resources. They play a critical role in the system's I/O infrastructure. This README provides an overview of how file descriptors work in the Linux kernel.
+
+## Table of Contents
+- [File Descriptor Assignment](#file-descriptor-assignment)
+- [File Descriptor Table](#file-descriptor-table)
+- [Kernel Data Structures](#kernel-data-structures)
+- [System Calls](#system-calls)
+- [File Descriptor Look-Up](#file-descriptor-look-up)
+- [Access Control and Permissions](#access-control-and-permissions)
+- [File Descriptor Cleanup](#file-descriptor-cleanup)
+
+## File Descriptor Assignment
+
+When a process opens a file, device, or socket, the kernel assigns it a unique non-negative integer known as a file descriptor (FD). This FD acts as a reference or handle to the resource for the duration of the process's interaction, simplifying resource identification.
+
+## File Descriptor Table
+
+Each process in the kernel maintains its file descriptor table, an array that stores information about open files, devices, or sockets. Each entry contains details such as the file's current position, access mode, and a reference to the underlying data structure.
+
+## Kernel Data Structures
+
+In the Linux kernel, file descriptors are closely tied to data structures, such as the `struct file` and the `struct inode`. The `struct file` represents an open file, while the `struct inode` represents the underlying file system object (e.g., regular files, directories, or devices).
+
+## System Calls
+
+Processes use system calls like `read()`, `write()`, `open()`, and `close()` to perform I/O operations on resources. These system calls take the file descriptor as an argument, allowing the kernel to identify the target resource.
+
+## File Descriptor Look-Up
+
+When a process initiates an I/O operation with a file descriptor, the kernel searches the process's file descriptor table to retrieve resource-specific information. This includes the location for reading or writing data and relevant permissions and attributes.
+
+## Access Control and Permissions
+
+The kernel enforces access control and permissions based on the attributes of the file descriptor and user permissions. This ensures that processes can only operate on resources for which they have the appropriate access.
+
+## File Descriptor Cleanup
+
+Processes should responsibly close file descriptors using the `close()` system call when they are done with a resource. This action removes the entry from the file descriptor table and releases associated resources like memory buffers and locks.
+
+In summary, file descriptors are a vital component of the Linux kernel's I/O subsystem, simplifying interactions with files, devices, and I/O resources. They are managed within each process's file descriptor table, serving as a bridge between processes and the kernel's underlying data structures. This abstraction streamlines reading from and writing to diverse data sources while upholding security and access control.
+
+**For in-depth details and examples, please refer to the full documentation and resources related to file descriptors.**
